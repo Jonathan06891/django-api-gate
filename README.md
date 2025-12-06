@@ -64,7 +64,7 @@ Once installed, any request to your protected URL prefix (e.g., /api/data) will 
 
 curl -H "X-Api-Key: 'customer-uuid-here'" [https://yoursite.com/api/data](https://yoursite.com/api/data)
 
-If a user is missing a key or runs out of credits, they receive a standard 402 Payment Required response:
+If a user runs out of credits, they receive a standard 402 Payment Required response:
 
 {
     "error": "Insufficient Credits",
@@ -72,6 +72,13 @@ If a user is missing a key or runs out of credits, they receive a standard 402 P
     "top_up_url": "[https://api-gate-production.onrender.com/](https://api-gate-production.onrender.com/)"
 }
 
+If a user is missing a key, they receive a standard 402 Payment Required response:
+
+{
+    "error": "Payment Required",
+    "message": "Access requires a prepaid API Key in header 'X-Api-Key'.",
+    "portal_url": "[https://api-gate-production.onrender.com/](https://api-gate-production.onrender.com/)"
+}
 
 # 🏗️ Architecture
 
