@@ -1,0 +1,38 @@
+Python Bytecode (Generated automatically)
+
+pycache/
+*.py[cod]
+*$py.class
+
+Distribution / Packaging (Crucial for PyPI uploads)
+
+dist/
+build/
+*.egg-info/
+.eggs/
+sdist/
+var/
+
+Virtual Environments
+
+venv/
+.venv/
+env/
+ENV/
+
+Django (If you run tests or sandbox inside this repo)
+
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+Environment Variables (Never commit keys!)
+
+.env
+
+IDE / Editor Settings
+
+.vscode/
+.idea/
+*.swp
