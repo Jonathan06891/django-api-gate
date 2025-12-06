@@ -33,10 +33,10 @@ class ApiGateMiddleware:
         
         if not visitor_key:
             return JsonResponse({
-                "error": "Payment Required",
+                "error": "Unauthorized",
                 "message": f"Access requires a prepaid API Key in header 'X-Api-Key'.",
                 "portal_url": f"{self.bank_url}"
-            }, status=402)
+            }, status=401)
 
         # 3. EXECUTE PAYMENT (Using Persistent Session)
         try:
