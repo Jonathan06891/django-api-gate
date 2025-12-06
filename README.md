@@ -43,16 +43,18 @@ MIDDLEWARE = [
 
 3. Copy your API Key from the dashboard.
 
-4. Add it to settings.py:
+4. Add your API Key to settings.py:
 
 API_GATE_API_KEY = "your-merchant-uuid-here"
 
-You can customize the behavior with these optional variables:
+OPTIONAL VARIABLES:
 
-Change which URLS are protected (Default: '/api/')
+Change which URLS are protected (Default: '/api/'):
+
 API_GATE_URL_PREFIX = "/v1/"
 
-Change cost per request (Default: 1 credit)
+Change the cost per request (Default: 1 credit):
+
 API_GATE_PRICE = 5
 
 
@@ -60,10 +62,7 @@ API_GATE_PRICE = 5
 
 Once installed, any request to your protected URL prefix (e.g., /api/data) will require an API Gate Key in the header:
 
-curl -H "X-Api-Key: customer-uuid-here" [https://yoursite.com/api/data](https://yoursite.com/api/data)
-
-
-Error Responses
+curl -H "X-Api-Key: 'customer-uuid-here'" [https://yoursite.com/api/data](https://yoursite.com/api/data)
 
 If a user is missing a key or runs out of credits, they receive a standard 402 Payment Required response:
 
