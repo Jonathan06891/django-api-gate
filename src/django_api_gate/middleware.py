@@ -7,7 +7,7 @@ class ApiGateMiddleware:
         self.get_response = get_response
         
         # CONFIGURATION
-        self.bank_url = getattr(settings, 'API_GATE_BANK_URL', 'https://api-gate-production.onrender.com')
+        self.bank_url = getattr(settings, 'API_GATE_BANK_URL', 'https://api-gate-hub.onrender.com')
         self.price = getattr(settings, 'API_GATE_PRICE', 1) 
         self.api_key = getattr(settings, 'API_GATE_API_KEY', None)
         self.protected_prefix = getattr(settings, 'API_GATE_URL_PREFIX', '/api/')
