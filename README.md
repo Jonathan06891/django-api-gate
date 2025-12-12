@@ -69,15 +69,15 @@ If a user runs out of credits, they receive a standard 402 Payment Required resp
 {
     "error": "Insufficient Credits",
     "balance": 0,
-    "top_up_url": "[https://https://api-gate-hub.onrender.com/](https://https://api-gate-hub.onrender.com/)"
+    "top_up_url": "[https://api-gate-hub.onrender.com](https://api-gate-hub.onrender.com)"
 }
 
-If a user is missing a key, they receive a standard 402 Payment Required response:
+If a user is missing a key, they receive a standard 401 Unauthorized response:
 
 {
-    "error": "Payment Required",
+    "error": "Unauthorized",
     "message": "Access requires a prepaid API Key in header 'X-Api-Key'.",
-    "portal_url": "[https://https://api-gate-hub.onrender.com/](https://https://api-gate-hub.onrender.com/)"
+    "portal_url": "[https://api-gate-hub.onrender.com](https://api-gate-hub.onrender.com)"
 }
 
 # 🏗️ Architecture
